@@ -8,7 +8,7 @@
 
 ### Harjoitustyön ydin: 
 <br />
-6 x 7 -kokoisella laudalla pelattava peli, jossa voittaa kun saa neljä omaa pelimerkkiä riviin. Pelimerkit tiputetaan laudalle. Pelaaja pelaa tekoälyä vastaan. tekoäly on fiksu. minimax-algoritmin avulla tarkistetaan aina mikä on paras mahdollinen siirto vuorolla ja valitaan se siirto. 
+6 x 7 -kokoisella laudalla pelattava peli, jossa voittaa kun saa neljä omaa pelimerkkiä riviin. Pelimerkit tiputetaan laudalle. Pelaaja pelaa tekoälyä vastaan. tekoäly on fiksu. minimax-algoritmin avulla tarkistetaan aina mikä on paras mahdollinen siirto vuorolla ja valitaan se siirto. teen graafisen käyttöliittymän pygamella
 
 <br />
 
