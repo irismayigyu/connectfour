@@ -1,4 +1,5 @@
 
+## Viikkoraportti 1:
 
 Mitä olen tehnyt tällä viikolla?: Tutustuin kurssiin, kurssimateriaaliin, kurssin rakenteeseen, alustin repositorioni, valitsin aiheen, tein vähän taustatutkimusta aiheestani, määrittelydokumentti, tutustuin minimaxiin
 
