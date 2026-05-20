@@ -22,30 +22,28 @@ class Pelinäkymä:
         while is_running:
             self.screen.fill((125, 158, 192))
             self.draw_cells()
+            if self.matrix.game_over:
+                self.announce_winner(current_player)
             pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     is_running = False
-                if event.type == pygame.MOUSEBUTTONDOWN:
+                if event.type == pygame.MOUSEBUTTONDOWN and not self.matrix.game_over:
                     x = event.pos[0]
                     col = x // 80
                     col = (x - 20) // (self.cell_size + self.gap)
 
                     if 0 <= col <= 6:
+                        current_player = self.matrix.player
                         self.matrix.turn(col)
-                        if self.matrix.checker("O"):
-                            self.announce_winner("O")
-                        if self.matrix.checker("X"):
-                            self.announce_winner("X")
+                        if self.matrix.checker(current_player):
+                            self.matrix.game_over = True
+                            self.announce_winner(current_player)
 
     def announce_winner(self, player):
-        self.screen.fill((125, 158, 192))
         winner_message = self.font.render(
             f"{player} has won!", True, (0, 0, 0))
-        # winner_message2 = self.font.render(
-        #     "you can unlock weird tiles by pressing 7", True, (0, 0, 0))
         self.screen.blit(winner_message, (34, 160))
-        # self.screen.blit(winner_message2, (85, 200))
 
     def draw_cells(self):
         for row in range(6):
