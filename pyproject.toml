@@ -4,11 +4,13 @@ version = "0.1.0"
 description = ""
 authors = ["Iris <iris.perttuli@gmail.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
 cowsay = "^6.1"
 pygame = "^2.6.1"
+
 
 
 [build-system]
